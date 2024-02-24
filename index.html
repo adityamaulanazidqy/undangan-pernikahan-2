@@ -58,6 +58,18 @@
             /* Atur z-index di atas bunga */
         }
 
+        .theDate {
+            text-align: center;
+            background-image: url('assets/img/bg\ savethedate.png');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: auto 100vh;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+            /* Atur z-index di atas bunga */
+        }
+
         .bunga {
             position: absolute;
             width: 300px;
@@ -101,8 +113,47 @@
             /* Ukuran ikon */
         }
 
+        /* CSS untuk waktu acara */
+        .waktu-acara {
+            text-align: center;
+            margin-top: 180px;
+            color: #685952;
+            font-family: 'Cormorant Garamond', sans-serif;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        /* Gaya untuk angka */
+        .angka {
+            position: relative;
+            right: -38px;
+            top: -28px;
+            /* Sesuaikan sesuai kebutuhan */
+            font-weight: bold;
+            font-size: 36px;
+            /* Sesuaikan sesuai kebutuhan */
+            display: inline-block;
+            margin-right: 5px;
+            /* Sesuaikan sesuai kebutuhan */
+        }
+
+        .theDate .gambar-swippp {
+            top: 20px;
+            width: 60px;
+            /* Sesuaikan ukuran lebar gambar sesuai kebutuhan */
+            height: auto;
+            /* Sesuaikan tinggi gambar secara proporsional */
+            position: relative;
+            z-index: 2;
+            /* Atur z-index agar gambar muncul di atas teks */
+            /* Sesuaikan posisi gambar sesuai kebutuhan */
+            filter: brightness(100%) invert(100%);
+        }
+
 
         @media only screen and (min-width: 320px) and (max-width: 640px) {
+
+            /* Start Laman pembukaan */
             .pembukaan {
                 background-size: 388px 100vh;
             }
@@ -144,9 +195,66 @@
                 margin-bottom: -38px;
             }
 
+            /* Penutup Laman pembukaan */
+
+            /* Start theDate */
+            .theDate {
+                background-size: 388px 100vh;
+            }
+
+            .theDate .isi p {
+                position: relative;
+                margin-bottom: 0px;
+            }
+
+            .bunga {
+                position: absolute;
+                width: 300px;
+                top: 0px;
+                right: 0px;
+                z-index: 1;
+                transform: rotate(180deg);
+            }
+
+            .bungabwh {
+                position: absolute;
+                width: 300px;
+                top: 398px;
+                right: 92px;
+                z-index: 1;
+                transform: rotate(0deg);
+            }
+
+            .theDate .isi {
+                position: relative;
+                top: 120px;
+            }
+
+            .theDate .isi h1 {
+                color: #685952;
+                font-family: "Great Vibes", Sans-serif;
+                font-size: 64px;
+                font-weight: normal;
+                margin-top: 0px;
+                margin-bottom: -38px;
+            }
+
+            .theDate .isi .date {
+                margin-top: 50px;
+            }
+
+            .theDate .isi .scroll {
+                top: -14px;
+            }
+
+            /* Penutup theDate */
+
+
         }
 
-        @media only screen and (min-width: 641px) and (max-width: 1300px) {
+        @media only screen and (min-width: 641px) and (max-width: 1600px) {
+
+            /* Start Laman pembukaan */
             .pembukaan {
                 background-size: auto 100vh;
             }
@@ -165,6 +273,67 @@
                 z-index: 1;
                 transform: rotate(180deg);
             }
+
+            .pembukaan .isi {
+                position: relative;
+                top: 170px;
+            }
+
+            .pembukaan .isi h1 {
+                color: #685952;
+                font-family: "Great Vibes", Sans-serif;
+                font-size: 64px;
+                font-weight: normal;
+                margin-top: 0px;
+                margin-bottom: -38px;
+            }
+
+            .pembukaan .isi .dan {
+                margin-top: 20px;
+            }
+
+            /* Penutup Laman pembukaan */
+
+            /* Start theDate */
+            .theDate {
+                background-size: auto 100vh;
+            }
+
+            .theDate p,
+            .theDate h1 {
+                position: relative;
+                margin: 0;
+            }
+
+            .bunga {
+                position: absolute;
+                width: 300px;
+                top: 0px;
+                right: 436px;
+                z-index: 1;
+                transform: rotate(180deg);
+            }
+
+            .theDate .isi {
+                position: relative;
+                top: 170px;
+            }
+
+            .theDate .isi h1 {
+                color: #685952;
+                font-family: "Great Vibes", Sans-serif;
+                font-size: 64px;
+                font-weight: normal;
+                margin-top: 0px;
+                margin-bottom: -38px;
+            }
+
+            .theDate .isi .scroll {
+                top: 6px;
+            }
+
+            /* Penutup theDate */
+
         }
     </style>
 </head>
@@ -179,7 +348,7 @@
             font-weight: normal;">The Wedding Of</p>
             <h1 style="position: relative;
             right: 32px;">Fanani</h1>
-            <p style="color: #685952;
+            <p class="dan" style="color: #685952;
             font-family: 'Great Vibes', Sans-serif;
             font-size: 28px;
             font-weight: normal;">dan</p>
@@ -199,16 +368,43 @@
         </div>
         <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
     </div>
-    <div class="isi">
-        <!-- Isi konten Anda di sini -->
-        <div class="saveTheDate"></div>
-        <div class="penyelenggara"></div>
-        <div class="akadNikah"></div>
-        <div class="resepsi"></div>
-        <div class="loveGift"></div>
-        <div class="hadist"></div>
-        <div class="ucapan"></div>
+    <!-- Laman Save the date -->
+    <div class="theDate">
+        <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+        <div class="isi">
+            <p style="margin-top: 0px; margin-bottom: 18px;    color: #685952;
+            font-family: 'Crimson Pro', Sans-serif;
+            font-size: 16px;
+            font-weight: normal;">The Wedding Of</p>
+            <h1 style="position: relative;
+            right: 32px;">Fanani</h1>
+            <p class="dan" style="color: #685952;
+            font-family: 'Great Vibes', Sans-serif;
+            font-size: 28px;
+            font-weight: normal; margin-top: 20px;">dan</p>
+            <h1 style="position: relative;
+            right: -12px;">Ayu</h1>
+            <h2 class="date" style="color: #685952;
+            font-family:'Playball', Sans-serif; font-size: 24px; font-weight: normal; letter-spacing: 2px;    position: relative;
+    top: 154px;">Save The
+                Date</h2>
+            <!-- Tambahkan waktu acara di bawah "Save The Date" -->
+            <div class="waktu-acara">
+                <div id="hari" class="angka">10</div> Hari
+                <div id="jam" class="angka">12</div> Jam
+                <div id="menit" class="angka">30</div> Menit
+                <div id="detik" class="angka">45</div> Detik
+            </div>
+            <img src="assets/img/swippp.png" alt="" class="gambar-swippp">
+            <p class=" scroll" style="color: #000000;
+            font-family: 'Cormorant Garamond', Sans-serif; font-style: italic;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3em;">Scroll Keatas</p>
+        </div>
+        <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
     </div>
+    <!-- Penutup Save the date -->
 </body>
 
 </html>
