@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playball&family=Tangerine&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Playball&family=Tangerine&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Great+Vibes&family=Playball&family=Tangerine&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+lJDOkatzK2X+qwEMW/gnxfj2y6XUfoSfb6Fw6Gzo5s/ZwlKziThtv8e6yYBAsX2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-MH3ajjxCrb8Z9BhJpIoLXvITtWJtTRdJR6Tx0p8igY+OsktL1+nq7fejN4DH1/rZ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-UX2HQ4QRj/RG7tXFGK6V2wnR5WzlsAIOAMwZGdHw/92O9FjKo/1pVWt5vaFV8N6M"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        @font-face {
+            font-family: 'monotype';
+            src: url(assets/font/Monotype\ Corsiva.ttf);
+        }
+
+        .pembukaan {
+            text-align: center;
+            background-image: url('assets/img/bg\ awal.png');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: auto 100vh;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+            /* Atur z-index di atas bunga */
+        }
+
+        .bunga {
+            position: absolute;
+            width: 300px;
+            top: 20px;
+            /* Sesuaikan dengan posisi yang diinginkan */
+            right: 20px;
+            /* Sesuaikan dengan posisi yang diinginkan */
+            z-index: 1;
+            /* Atur z-index di atas background pembukaan */
+            transform: rotate(45deg);
+            /* Memutar gambar sebesar 45 derajat */
+
+        }
+
+        /* CSS untuk tombol */
+        .btn-primary {
+            margin-top: 20px;
+            font-family: "Playfair Display SC", Sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            letter-spacing: 1.2px;
+            fill: #FFFFFF;
+            color: #FFFFFF;
+            background-color: #685952;
+            border-style: none;
+            border-radius: 10px 10px 10px 10px;
+            padding: 5px 20px 10px 20px;
+        }
+
+        /* CSS untuk tombol saat dihover */
+        .btn-primary:hover {
+            background-color: #332e2b;
+            /* Warna latar belakang saat dihover */
+        }
+
+        /* CSS untuk ikon */
+        .bi-envelope {
+            margin-right: 0.5rem;
+            /* Margin kanan ikon */
+            font-size: 1.2rem;
+            /* Ukuran ikon */
+        }
+
+
+        @media only screen and (min-width: 320px) and (max-width: 640px) {
+            .pembukaan {
+                background-size: 388px 100vh;
+            }
+
+            .pembukaan .isi p {
+                position: relative;
+                margin-bottom: 0px;
+            }
+
+            .bunga {
+                position: absolute;
+                width: 300px;
+                top: 0px;
+                right: 0px;
+                z-index: 1;
+                transform: rotate(180deg);
+            }
+
+            .bungabwh {
+                position: absolute;
+                width: 300px;
+                top: 398px;
+                right: 92px;
+                z-index: 1;
+                transform: rotate(0deg);
+            }
+
+            .pembukaan .isi {
+                position: relative;
+                top: 120px;
+            }
+
+            .pembukaan .isi h1 {
+                color: #685952;
+                font-family: "Great Vibes", Sans-serif;
+                font-size: 64px;
+                font-weight: normal;
+                margin-top: 0px;
+                margin-bottom: -38px;
+            }
+
+        }
+
+        @media only screen and (min-width: 641px) and (max-width: 1300px) {
+            .pembukaan {
+                background-size: auto 100vh;
+            }
+
+            .pembukaan p,
+            .pembukaan h1 {
+                position: relative;
+                margin: 0;
+            }
+
+            .bunga {
+                position: absolute;
+                width: 300px;
+                top: 0px;
+                right: 436px;
+                z-index: 1;
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pembukaan">
+        <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+        <div class="isi">
+            <p style="margin-top: 0px; margin-bottom: 18px;    color: #685952;
+            font-family: 'Crimson Pro', Sans-serif;
+            font-size: 16px;
+            font-weight: normal;">The Wedding Of</p>
+            <h1 style="position: relative;
+            right: 32px;">Fanani</h1>
+            <p style="color: #685952;
+            font-family: 'Great Vibes', Sans-serif;
+            font-size: 28px;
+            font-weight: normal;">dan</p>
+            <h1 style="position: relative;
+            right: -12px;">Ayu</h1>
+            <p style="margin-top: 74px;color: #000000;
+            font-family: 'Cormorant Garamond', Sans-serif; font-size: 15px; font-weight: normal; line-height: 1.3em;">
+                Kepada Yth. </br>Bapak/Ibu/Saudara/i</p>
+            <h2 style="    color: #000000;
+            font-family: 'monotype', Sans-serif; font-size: 26px; font-weight: normal;    margin-bottom: 16px;
+    margin-top: 16px;">Daus</h2>
+            <p style="    color: #000000;
+            font-family: 'Cormorant Garamond', Sans-serif; font-size: 12px; font-weight: normal; line-height: 1.3em;">
+                Maaf apabila ada kesalahan pada penulisan nama/gelar
+            </p>
+            <button class="btn btn-primary"><i class="bi bi-envelope-open-fill"></i> Buka Undangan</button>
+        </div>
+        <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+    </div>
+    <div class="isi">
+        <!-- Isi konten Anda di sini -->
+        <div class="saveTheDate"></div>
+        <div class="penyelenggara"></div>
+        <div class="akadNikah"></div>
+        <div class="resepsi"></div>
+        <div class="loveGift"></div>
+        <div class="hadist"></div>
+        <div class="ucapan"></div>
+    </div>
+</body>
+
+</html>
