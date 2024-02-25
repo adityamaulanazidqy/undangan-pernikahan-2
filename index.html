@@ -33,6 +33,9 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -69,6 +72,61 @@
             z-index: 1;
             /* Atur z-index di atas bunga */
         }
+
+        .acaraPernikahan {
+            text-align: center;
+            background-image: url('assets/img/bg\ acaraPernikahan.png');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: auto 100vh;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+            /* Atur z-index di atas bunga */
+        }
+
+        .acaraPernikahan .isi .rectangle {
+            position: relative;
+            top: -152px;
+            background-color: rgba(255, 255, 255, -0.2);
+            /* Warna latar belakang dengan opasitas */
+            padding: 20px;
+            /* Padding sesuai kebutuhan */
+            border-radius: 12px;
+            /* Border radius untuk membuat sudut kotak lebih melengkung */
+            box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+            /* Efek bayangan (shadow) pada kotak */
+            width: 334px;
+            /* Lebar kotak */
+            height: 700px;
+            /* Tinggi kotak */
+            margin: 0 auto;
+            /* Menempatkan kotak di rata tengah */
+        }
+
+        /* .acaraPernikahan .isi .rectangle h2 {
+            color: #685952;
+            font-family: "Great Vibes", Sans-serif;
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        } */
+
+        /* .acaraPernikahan .isi .rectangle p {
+            color: #685952;
+            font-family: 'Cormorant Garamond', Sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.3em;
+            margin: 0;
+        } */
+
+        .acaraPernikahan .isi .bismillah {
+            width: 50%;
+            margin-top: 180px;
+        }
+
+
 
         .bunga {
             position: absolute;
@@ -249,6 +307,35 @@
 
             /* Penutup theDate */
 
+            /* Start acaraPernikahan */
+
+            .acaraPernikahan .isi .rectangle {
+                position: relative;
+                top: 22px;
+                background-color: rgba(255, 255, 255, -0.2);
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+                width: 318px;
+                height: 664px;
+                margin: 0 auto;
+            }
+
+            .acaraPernikahan .isi .salam {
+                margin-bottom: 6px;
+            }
+
+            .acaraPernikahan .isi .rahmat {
+                margin-top: 0px;
+            }
+
+            .acaraPernikahan .isi .putra {
+                margin-top: 0px;
+                padding: 0px 26px;
+            }
+
+            /* Akhir acaraPernikahan */
+
 
         }
 
@@ -334,6 +421,47 @@
 
             /* Penutup theDate */
 
+            /* Start acaraPernikahan */
+            .acaraPernikahan {
+                background-size: auto 100vh;
+            }
+
+            .acaraPernikahan p,
+            .acaraPernikahan h1 {
+                position: relative;
+                margin: 0;
+            }
+
+            .bunga {
+                position: absolute;
+                width: 300px;
+                top: 0px;
+                right: 436px;
+                z-index: 1;
+                transform: rotate(180deg);
+            }
+
+            .acaraPernikahan .isi {
+                position: relative;
+                top: 170px;
+            }
+
+            .acaraPernikahan .isi h1 {
+                color: #685952;
+                font-family: "Great Vibes", Sans-serif;
+                font-size: 64px;
+                font-weight: normal;
+                margin-top: 0px;
+                margin-bottom: -38px;
+            }
+
+            .acaraPernikahan .isi .putra {
+                margin-top: 0px;
+                padding: 0px 38px;
+            }
+
+            /* Penutup acaraPernikahan */
+
         }
     </style>
 </head>
@@ -368,6 +496,7 @@
         </div>
         <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
     </div>
+
     <!-- Laman Save the date -->
     <div class="theDate">
         <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
@@ -401,6 +530,41 @@
             font-size: 18px;
             font-weight: 500;
             line-height: 1.3em;">Scroll Keatas</p>
+        </div>
+        <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+    </div>
+    <!-- Penutup Save the date -->
+
+    <!-- Laman acaraPernikahan -->
+    <div class="acaraPernikahan">
+        <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+        <div class="isi">
+            <div class="rectangle">
+                <!-- Isi konten kotak sesuai kebutuhan -->
+                <img src="assets/img/bismillah.svg" alt="" class="bismillah">
+                <h2 class="salam" style="color: #555555;
+                font-family: 'Crimson Pro', Sans-serif; font-size: 18px; font-weight: bold;    margin-bottom: 10px;
+    margin-top: 10px;">Assalamu'alaikum Wr. Wb.
+                </h2>
+                <p class="rahmat" style="color: #555555;
+                font-family: 'Crimson Pro', Sans-serif; font-size: 16px; font-weight: normal;">Dengan memohon rahmat
+                    dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan menyelenggarakan
+                    acara pernikahan :</p>
+                <h2 style="    color: #685952;
+                font-family: 'Courgette', Sans-serif;
+                font-size: 24px;
+                font-weight: normal;
+                text-transform: capitalize;
+                letter-spacing: 0px;
+                margin-bottom: 0px;">Akhsanul Fanani
+                </h2>
+                <p class="putra" style="color: #555555;
+                font-family: 'Crimson Pro', Sans-serif;
+                font-size: 16px;
+                font-weight: normal;
+                text-transform: capitalize;">Putra Kedua Dari Bapak H. Bahrul Hasan
+                    & Ibu Hj. Masnawiyah</p>
+            </div>
         </div>
         <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
     </div>
