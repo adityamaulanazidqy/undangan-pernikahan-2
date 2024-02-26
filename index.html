@@ -36,6 +36,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Croissant+One&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -88,7 +91,7 @@
         .acaraPernikahan .isi .rectangle {
             position: relative;
             top: -152px;
-            background-color: rgba(255, 255, 255, -0.2);
+            background-color: rgba(255, 255, 255, 0.2);
             /* Warna latar belakang dengan opasitas */
             padding: 20px;
             /* Padding sesuai kebutuhan */
@@ -102,6 +105,31 @@
             /* Tinggi kotak */
             margin: 0 auto;
             /* Menempatkan kotak di rata tengah */
+        }
+
+        .acaraPernikahan .isi .rectangle p.dan::before,
+        .acaraPernikahan .isi .rectangle p.dan::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 14%;
+            height: 0.5px;
+            /* Lebar garis */
+            background-color: black;
+            /* Warna garis */
+            border-radius: 24px;
+        }
+
+        .acaraPernikahan .isi .rectangle p.dan::before {
+            left: 30%;
+            /* Jarak dari teks "&" ke kiri */
+            transform: translateY(-50%);
+        }
+
+        .acaraPernikahan .isi .rectangle p.dan::after {
+            right: 30%;
+            /* Jarak dari teks "&" ke kanan */
+            transform: translateY(-50%);
         }
 
         /* .acaraPernikahan .isi .rectangle h2 {
@@ -331,7 +359,12 @@
 
             .acaraPernikahan .isi .putra {
                 margin-top: 0px;
+                margin-bottom: 0px;
                 padding: 0px 26px;
+            }
+
+            .acaraPernikahan .isi .dan {
+                margin-top: 0px;
             }
 
             /* Akhir acaraPernikahan */
@@ -550,7 +583,7 @@
                 font-family: 'Crimson Pro', Sans-serif; font-size: 16px; font-weight: normal;">Dengan memohon rahmat
                     dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan menyelenggarakan
                     acara pernikahan :</p>
-                <h2 style="    color: #685952;
+                <h2 style="color: #685952;
                 font-family: 'Courgette', Sans-serif;
                 font-size: 24px;
                 font-weight: normal;
@@ -564,6 +597,83 @@
                 font-weight: normal;
                 text-transform: capitalize;">Putra Kedua Dari Bapak H. Bahrul Hasan
                     & Ibu Hj. Masnawiyah</p>
+
+                <p class="dan"
+                    style="color: #555555;
+                font-family: 'Croissant One', Sans-serif; font-size: 20px; font-weight: 400; position: relative; top: 12px;">
+                    &</p>
+
+                <h2 style="color: #685952;
+                font-family: 'Courgette', Sans-serif;
+                font-size: 24px;
+                font-weight: normal;
+                text-transform: capitalize;
+                letter-spacing: 0px;
+                margin-bottom: 0px;">Siti Hajar Ayu Kurnia Anjani
+                </h2>
+                <p class="putra" style="color: #555555;
+                font-family: 'Crimson Pro', Sans-serif;
+                font-size: 16px;
+                font-weight: normal;
+                text-transform: capitalize;
+                padding: 0px;">Putri Pertama Dari Bapak KH. Ahmad Shobih Abidi
+                    & Ibu Nyai Anik Khumairoh</p>
+            </div>
+        </div>
+        <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+    </div>
+    <!-- Penutup Save the date -->
+
+    <!-- Laman acaraPernikahan -->
+    <div class="acaraPernikahan">
+        <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+        <div class="isi">
+            <div class="rectangle">
+                <!-- Isi konten kotak sesuai kebutuhan -->
+                <img src="assets/img/bismillah.svg" alt="" class="bismillah">
+                <h2 class="salam" style="color: #555555;
+                font-family: 'Crimson Pro', Sans-serif; font-size: 18px; font-weight: bold;    margin-bottom: 10px;
+    margin-top: 10px;">Assalamu'alaikum Wr. Wb.
+                </h2>
+                <p class="rahmat" style="color: #555555;
+                font-family: 'Crimson Pro', Sans-serif; font-size: 16px; font-weight: normal;">Dengan memohon rahmat
+                    dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan menyelenggarakan
+                    acara pernikahan :</p>
+                <h2 style="color: #685952;
+                font-family: 'Courgette', Sans-serif;
+                font-size: 24px;
+                font-weight: normal;
+                text-transform: capitalize;
+                letter-spacing: 0px;
+                margin-bottom: 0px;">Akhsanul Fanani
+                </h2>
+                <p class="putra" style="color: #555555;
+                font-family: 'Crimson Pro', Sans-serif;
+                font-size: 16px;
+                font-weight: normal;
+                text-transform: capitalize;">Putra Kedua Dari Bapak H. Bahrul Hasan
+                    & Ibu Hj. Masnawiyah</p>
+
+                <p class="dan"
+                    style="color: #555555;
+                font-family: 'Croissant One', Sans-serif; font-size: 20px; font-weight: 400; position: relative; top: 12px;">
+                    &</p>
+
+                <h2 style="color: #685952;
+                font-family: 'Courgette', Sans-serif;
+                font-size: 24px;
+                font-weight: normal;
+                text-transform: capitalize;
+                letter-spacing: 0px;
+                margin-bottom: 0px;">Siti Hajar Ayu Kurnia Anjani
+                </h2>
+                <p class="putra" style="color: #555555;
+                font-family: 'Crimson Pro', Sans-serif;
+                font-size: 16px;
+                font-weight: normal;
+                text-transform: capitalize;
+                padding: 0px;">Putri Pertama Dari Bapak KH. Ahmad Shobih Abidi
+                    & Ibu Nyai Anik Khumairoh</p>
             </div>
         </div>
         <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
