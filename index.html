@@ -39,6 +39,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Croissant+One&display=swap" rel="stylesheet">
+    <link href="https://fontawesome.com/v5/icons/map-marked-alt?f=classic&s=solid">
+    <link rel="stylesheet" href="assets/icon/fontawesome-free-5.15.4-web/css/all.min.css">
 
     <style>
         body {
@@ -155,6 +157,152 @@
         }
 
 
+        .akadNikah {
+            text-align: center;
+            background-image: url('assets/img/bg\ acaraPernikahan.png');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: auto 100vh;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+            /* Atur z-index di atas bunga */
+        }
+
+        .akadNikah .isi .rectangle {
+            position: relative;
+            top: -144px;
+            background-color: rgba(255, 255, 255, -0.2);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+            width: 318px;
+            height: 664px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .akadNikah .isi .rectangle h2 {
+            color: #7A6C61;
+            font-family: 'Courgette', Sans-serif;
+            font-size: 34px;
+            font-weight: normal;
+        }
+
+        .akadNikah .isi .rectangle .tahun-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+
+        .akadNikah .isi .rectangle .tahun {
+            color: #ffffff;
+            font-family: 'Times New Roman', Sans-serif;
+            font-size: 46px;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 0.8em;
+            letter-spacing: 2.3px;
+            margin-right: 5px;
+        }
+
+        .akadNikah .isi .rectangle .tahun-label {
+            color: #ffffff;
+            font-family: 'Times New Roman', Sans-serif;
+            font-size: 15px;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 0.7em;
+            letter-spacing: 3.1px;
+        }
+
+        .akadNikah .isi .rectangle .cincin {
+            width: 80px;
+            filter: brightness(96%) contrast(80%) saturate(63%) blur(0px) hue-rotate(29deg);
+        }
+
+        .background-angka {
+            background-color: #7A6C61;
+            /* Warna latar belakang dengan opasitas */
+            padding: 14px;
+            border-radius: 10px;
+            /* box-shadow: 0 0 14px rgba(0, 0, 0, 0.3); */
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .background-angka .tahun {
+            color: #000000;
+            font-family: 'Times New Roman', Sans-serif;
+            font-size: 46px;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 0.8em;
+            letter-spacing: 2.3px;
+            margin-right: 5px;
+        }
+
+        .background-angka .tahun-label {
+            color: #000000;
+            font-family: 'Times New Roman', Sans-serif;
+            font-size: 15px;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 0.7em;
+            letter-spacing: 3.1px;
+        }
+
+        .background-angka::before {
+            content: "Minggu";
+            position: absolute;
+            left: -70px;
+            left: 40px;
+            top: 48.5%;
+            transform: translateY(-50%);
+            color: #7A6C61;
+            /* Warna teks */
+            font-family: 'Times New Roman', Sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 0.7em;
+            letter-spacing: 3.1px;
+            border-top: 1px solid #7A6C61;
+            /* Garis atas */
+            border-bottom: 1px solid #7A6C61;
+            /* Garis bawah */
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+
+        .background-angka::after {
+            content: "Februari";
+            position: absolute;
+            right: 20px;
+            /* Sesuaikan posisi teks kanan */
+            top: 48.5%;
+            transform: translateY(-50%);
+            color: #7A6C61;
+            /* Warna teks */
+            font-family: "Times New Roman", Sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 0.7em;
+            letter-spacing: 3.1px;
+            border-top: 1px solid #7A6C61;
+            /* Garis atas */
+            border-bottom: 1px solid #7A6C61;
+            /* Garis bawah */
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
 
         .bunga {
             position: absolute;
@@ -369,6 +517,44 @@
 
             /* Akhir acaraPernikahan */
 
+            /* Awal akadNikah */
+
+            .akadNikah .isi .rectangle {
+                position: relative;
+                top: 22px;
+                background-color: rgba(255, 255, 255, -0.2);
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+                width: 318px;
+                height: 664px;
+                margin: 0 auto;
+            }
+
+            .akadNikah .isi .rectangle .resepsi {
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+
+            .akadNikah .isi .rectangle .pukul {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+
+            .akadNikah .isi .rectangle .lokasi {
+                margin-top: 10px;
+                margin-bottom: 6px;
+            }
+
+            .akadNikah .isi .rectangle .alamat {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+
+
+
+            /* Akhir akadNikah */
+
 
         }
 
@@ -491,6 +677,52 @@
             .acaraPernikahan .isi .putra {
                 margin-top: 0px;
                 padding: 0px 38px;
+            }
+
+            /* Penutup acaraPernikahan */
+
+            /* Start acaraPernikahan */
+            .akadNikah {
+                background-size: auto 100vh;
+            }
+
+            .akadNikah p,
+            .akadNikah h1 {
+                position: relative;
+                margin: 0;
+            }
+
+            .bunga {
+                position: absolute;
+                width: 300px;
+                top: 0px;
+                right: 436px;
+                z-index: 1;
+                transform: rotate(180deg);
+            }
+
+            .akadNikah .isi {
+                position: relative;
+                top: 170px;
+            }
+
+            .akadNikah .isi h1 {
+                color: #685952;
+                font-family: "Great Vibes", Sans-serif;
+                font-size: 64px;
+                font-weight: normal;
+                margin-top: 0px;
+                margin-bottom: -38px;
+            }
+
+            .akadNikah .isi .rectangle .resepsi {
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+
+            .akadNikah .isi .rectangle .lokasi {
+                margin-top: 10px;
+                margin-bottom: 6px;
             }
 
             /* Penutup acaraPernikahan */
@@ -624,61 +856,41 @@
     </div>
     <!-- Penutup Save the date -->
 
-    <!-- Laman acaraPernikahan -->
-    <div class="acaraPernikahan">
+    <!-- Laman akadNikah -->
+    <div class="akadNikah">
         <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
         <div class="isi">
             <div class="rectangle">
                 <!-- Isi konten kotak sesuai kebutuhan -->
-                <img src="assets/img/bismillah.svg" alt="" class="bismillah">
-                <h2 class="salam" style="color: #555555;
-                font-family: 'Crimson Pro', Sans-serif; font-size: 18px; font-weight: bold;    margin-bottom: 10px;
-    margin-top: 10px;">Assalamu'alaikum Wr. Wb.
-                </h2>
-                <p class="rahmat" style="color: #555555;
-                font-family: 'Crimson Pro', Sans-serif; font-size: 16px; font-weight: normal;">Dengan memohon rahmat
-                    dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan menyelenggarakan
-                    acara pernikahan :</p>
-                <h2 style="color: #685952;
-                font-family: 'Courgette', Sans-serif;
-                font-size: 24px;
-                font-weight: normal;
-                text-transform: capitalize;
-                letter-spacing: 0px;
-                margin-bottom: 0px;">Akhsanul Fanani
-                </h2>
-                <p class="putra" style="color: #555555;
-                font-family: 'Crimson Pro', Sans-serif;
-                font-size: 16px;
-                font-weight: normal;
-                text-transform: capitalize;">Putra Kedua Dari Bapak H. Bahrul Hasan
-                    & Ibu Hj. Masnawiyah</p>
-
-                <p class="dan"
-                    style="color: #555555;
-                font-family: 'Croissant One', Sans-serif; font-size: 20px; font-weight: 400; position: relative; top: 12px;">
-                    &</p>
-
-                <h2 style="color: #685952;
-                font-family: 'Courgette', Sans-serif;
-                font-size: 24px;
-                font-weight: normal;
-                text-transform: capitalize;
-                letter-spacing: 0px;
-                margin-bottom: 0px;">Siti Hajar Ayu Kurnia Anjani
-                </h2>
-                <p class="putra" style="color: #555555;
-                font-family: 'Crimson Pro', Sans-serif;
-                font-size: 16px;
-                font-weight: normal;
-                text-transform: capitalize;
-                padding: 0px;">Putri Pertama Dari Bapak KH. Ahmad Shobih Abidi
-                    & Ibu Nyai Anik Khumairoh</p>
+                <img src="assets/img/cincin.png" alt="" class="cincin">
+                <h2 class="resepsi"
+                    style="color: #7A6C61; font-family: 'Courgette', Sans-serif; font-size: 34px; font-weight: normal;">
+                    Resepsi</h2>
+                <div class="tahun-container">
+                    <div class="background-angka">
+                        <div class="tahun">18</div>
+                        <div style="color: #FFFFFF;
+                        font-family: 'Times New Roman', Sans-serif; font-size: 15px; font-weight: normal;
+                            text-transform: uppercase; line-height: 0.7em; letter-spacing: 3.1px;" class="tahun">2024
+                        </div>
+                    </div>
+                </div>
+                <p class="pukul" style="color: #000000;
+                font-family: 'Cormorant Garamond', Sans-serif; font-size: 17px; font-weight: normal;">Pukul : 12.00
+                    Wib s/d Selesai</p>
+                <h2 class="lokasi" style="color: #7A6C61;
+                    font-family: 'Times New Roman', Sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;">Lokasi Acara</h2>
+                <p class="alamat" style="color: #000000;
+                font-family: 'Cormorant Garamond', Sans-serif; font-size: 17px; font-weight: normal; line-height:
+                    1.3em; padding: 0px 20px;">Mojosantren RT 11 RW 03 No. 25 Kemasan Krian Sidoarjo</p>
+                <button class="btn btn-primary"><i class="fas fa-map-marked-alt"></i> Lihat Lokasi</button>
             </div>
         </div>
         <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
     </div>
-    <!-- Penutup Save the date -->
+    <!-- Penutup akadNikah -->
 </body>
 
 </html>
