@@ -110,3 +110,98 @@ body {
   width: 50%;
   margin-top: 180px;
 }
+
+.komentar {
+  text-align: center;
+  background-image: url('../img/bg\ akhir.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto 100vh;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  /* Atur z-index di atas bunga */
+}
+
+.komentar .isi .rectangle p.dan::before,
+.komentar .isi .rectangle p.dan::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 14%;
+  height: 0.5px;
+  /* Lebar garis */
+  background-color: black;
+  /* Warna garis */
+  border-radius: 24px;
+}
+
+.komentar .isi .rectangle p.dan::before {
+  left: 30%;
+  /* Jarak dari teks "&" ke kiri */
+  transform: translateY(-50%);
+}
+
+.komentar .isi .rectangle p.dan::after {
+  right: 30%;
+  /* Jarak dari teks "&" ke kanan */
+  transform: translateY(-50%);
+}
+
+.komentar .isi .form-komentar {
+  margin-top: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 23px -12px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 20px 20px 10px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.komentar .isi .form-komentar input[type='text'],
+.komentar .isi .form-komentar textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.komentar .isi .form-komentar button {
+  background-color: #7a6c61;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left; /* Menjadikan tombol rata kiri */
+  position: relative;
+  right: 102px;
+}
+
+.komentar .isi .form-komentar button:hover {
+  background-color: #4f3f32;
+}
+
+.komentar .isi .form-komentar textarea {
+  height: 80px;
+}
+
+.komentar .isi .form-komentar select,
+.komentar .isi .form-komentar label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.komentar .isi .form-komentar select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.komentar .isi .form-komentar label {
+  font-weight: bold;
+}
