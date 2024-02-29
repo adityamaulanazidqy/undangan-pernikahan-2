@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+@font-face {
+  font-family: 'monotype';
+  src: url(../font/Monotype\ Corsiva.ttf);
+}
+
+.pembukaan {
+  text-align: center;
+  background-image: url('../img/bg\ awal.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto 100vh;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  /* Atur z-index di atas bunga */
+}
+
+.theDate {
+  text-align: center;
+  background-image: url('../img/bg\ savethedate.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto 100vh;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  /* Atur z-index di atas bunga */
+}
+
+.acaraPernikahan {
+  text-align: center;
+  background-image: url('../img/bg\ acaraPernikahan.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto 100vh;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  /* Atur z-index di atas bunga */
+}
+
+.acaraPernikahan .isi .rectangle {
+  position: relative;
+  top: -152px;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Warna latar belakang dengan opasitas */
+  padding: 20px;
+  /* Padding sesuai kebutuhan */
+  border-radius: 12px;
+  /* Border radius untuk membuat sudut kotak lebih melengkung */
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+  /* Efek bayangan (shadow) pada kotak */
+  width: 334px;
+  /* Lebar kotak */
+  height: 700px;
+  /* Tinggi kotak */
+  margin: 0 auto;
+  /* Menempatkan kotak di rata tengah */
+}
+
+.acaraPernikahan .isi .rectangle p.dan::before,
+.acaraPernikahan .isi .rectangle p.dan::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 14%;
+  height: 0.5px;
+  /* Lebar garis */
+  background-color: black;
+  /* Warna garis */
+  border-radius: 24px;
+}
+
+.acaraPernikahan .isi .rectangle p.dan::before {
+  left: 30%;
+  /* Jarak dari teks "&" ke kiri */
+  transform: translateY(-50%);
+}
+
+.acaraPernikahan .isi .rectangle p.dan::after {
+  right: 30%;
+  /* Jarak dari teks "&" ke kanan */
+  transform: translateY(-50%);
+}
+
+/* .acaraPernikahan .isi .rectangle h2 {
+    color: #685952;
+    font-family: "Great Vibes", Sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 10px;
+} */
+
+/* .acaraPernikahan .isi .rectangle p {
+    color: #685952;
+    font-family: 'Cormorant Garamond', Sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.3em;
+    margin: 0;
+} */
+
+.acaraPernikahan .isi .bismillah {
+  width: 50%;
+  margin-top: 180px;
+}

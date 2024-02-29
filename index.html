@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playball&family=Tangerine&display=swap"
@@ -41,122 +42,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Croissant+One&display=swap" rel="stylesheet">
     <link href="https://fontawesome.com/v5/icons/map-marked-alt?f=classic&s=solid">
     <link rel="stylesheet" href="assets/icon/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            position: relative;
-        }
-
-        @font-face {
-            font-family: 'monotype';
-            src: url(assets/font/Monotype\ Corsiva.ttf);
-        }
-
-        .pembukaan {
-            text-align: center;
-            background-image: url('assets/img/bg\ awal.png');
-            background-repeat: no-repeat;
-            background-position: top center;
-            background-size: auto 100vh;
-            height: 100vh;
-            position: relative;
-            z-index: 1;
-            /* Atur z-index di atas bunga */
-        }
-
-        .theDate {
-            text-align: center;
-            background-image: url('assets/img/bg\ savethedate.png');
-            background-repeat: no-repeat;
-            background-position: top center;
-            background-size: auto 100vh;
-            height: 100vh;
-            position: relative;
-            z-index: 1;
-            /* Atur z-index di atas bunga */
-        }
-
-        .acaraPernikahan {
-            text-align: center;
-            background-image: url('assets/img/bg\ acaraPernikahan.png');
-            background-repeat: no-repeat;
-            background-position: top center;
-            background-size: auto 100vh;
-            height: 100vh;
-            position: relative;
-            z-index: 1;
-            /* Atur z-index di atas bunga */
-        }
-
-        .acaraPernikahan .isi .rectangle {
-            position: relative;
-            top: -152px;
-            background-color: rgba(255, 255, 255, 0.2);
-            /* Warna latar belakang dengan opasitas */
-            padding: 20px;
-            /* Padding sesuai kebutuhan */
-            border-radius: 12px;
-            /* Border radius untuk membuat sudut kotak lebih melengkung */
-            box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
-            /* Efek bayangan (shadow) pada kotak */
-            width: 334px;
-            /* Lebar kotak */
-            height: 700px;
-            /* Tinggi kotak */
-            margin: 0 auto;
-            /* Menempatkan kotak di rata tengah */
-        }
-
-        .acaraPernikahan .isi .rectangle p.dan::before,
-        .acaraPernikahan .isi .rectangle p.dan::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            width: 14%;
-            height: 0.5px;
-            /* Lebar garis */
-            background-color: black;
-            /* Warna garis */
-            border-radius: 24px;
-        }
-
-        .acaraPernikahan .isi .rectangle p.dan::before {
-            left: 30%;
-            /* Jarak dari teks "&" ke kiri */
-            transform: translateY(-50%);
-        }
-
-        .acaraPernikahan .isi .rectangle p.dan::after {
-            right: 30%;
-            /* Jarak dari teks "&" ke kanan */
-            transform: translateY(-50%);
-        }
-
-        /* .acaraPernikahan .isi .rectangle h2 {
-            color: #685952;
-            font-family: "Great Vibes", Sans-serif;
-            font-size: 24px;
-            font-weight: normal;
-            margin-bottom: 10px;
-        } */
-
-        /* .acaraPernikahan .isi .rectangle p {
-            color: #685952;
-            font-family: 'Cormorant Garamond', Sans-serif;
-            font-size: 16px;
-            font-weight: normal;
-            line-height: 1.3em;
-            margin: 0;
-        } */
-
-        .acaraPernikahan .isi .bismillah {
-            width: 50%;
-            margin-top: 180px;
-        }
-
-
         .akadNikah {
             text-align: center;
             background-image: url('assets/img/bg\ acaraPernikahan.png');
@@ -258,8 +146,8 @@
             letter-spacing: 3.1px;
         }
 
-        .background-angka::before {
-            content: "Minggu";
+        .akadNikah .background-angka::before {
+            content: "Jum'at";
             position: absolute;
             left: -70px;
             left: 40px;
@@ -277,11 +165,11 @@
             /* Garis atas */
             border-bottom: 1px solid #7A6C61;
             /* Garis bawah */
-            padding-top: 14px;
+            padding-top: 10px;
             padding-bottom: 14px;
         }
 
-        .background-angka::after {
+        .akadNikah .background-angka::after {
             content: "Februari";
             position: absolute;
             right: 20px;
@@ -300,8 +188,102 @@
             /* Garis atas */
             border-bottom: 1px solid #7A6C61;
             /* Garis bawah */
-            padding-top: 14px;
+            padding-top: 10px;
             padding-bottom: 14px;
+        }
+
+        .angka-resepsi {
+            background-color: #7A6C61;
+            /* Warna latar belakang dengan opasitas */
+            padding: 14px;
+            border-radius: 10px;
+            /* box-shadow: 0 0 14px rgba(0, 0, 0, 0.3); */
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .angka-resepsi .tahun {
+            color: #000000;
+            font-family: 'Times New Roman', Sans-serif;
+            font-size: 46px;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 0.8em;
+            letter-spacing: 2.3px;
+            margin-right: 5px;
+        }
+
+        .angka-resepsi .tahun-label {
+            color: #000000;
+            font-family: 'Times New Roman', Sans-serif;
+            font-size: 15px;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 0.7em;
+            letter-spacing: 3.1px;
+        }
+
+
+        .angka-resepsi::before {
+            content: "Minggu";
+            position: absolute;
+            left: -70px;
+            left: 40px;
+            top: 48.5%;
+            transform: translateY(-50%);
+            color: #7A6C61;
+            /* Warna teks */
+            font-family: 'Times New Roman', Sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 0.7em;
+            letter-spacing: 3.1px;
+            border-top: 1px solid #7A6C61;
+            /* Garis atas */
+            border-bottom: 1px solid #7A6C61;
+            /* Garis bawah */
+            padding-top: 10px;
+            padding-bottom: 14px;
+        }
+
+        .angka-resepsi::after {
+            content: "Februari";
+            position: absolute;
+            right: 20px;
+            /* Sesuaikan posisi teks kanan */
+            top: 48.5%;
+            transform: translateY(-50%);
+            color: #7A6C61;
+            /* Warna teks */
+            font-family: "Times New Roman", Sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 0.7em;
+            letter-spacing: 3.1px;
+            border-top: 1px solid #7A6C61;
+            /* Garis atas */
+            border-bottom: 1px solid #7A6C61;
+            /* Garis bawah */
+            padding-top: 10px;
+            padding-bottom: 14px;
+        }
+
+        .BCA {
+            margin-top: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 23px -12px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+            padding: 20px 20px 10px 20px;
+            border-radius: 20px;
+        }
+
+        .akadNikah .isi .rectangle .bca {
+            position: relative;
+            width: 65%;
+            top: -10px;
+            /* filter: brightness(96%) contrast(80%) saturate(63%) blur(0px) hue-rotate(29deg); */
         }
 
         .bunga {
@@ -555,6 +537,40 @@
 
             /* Akhir akadNikah */
 
+            /* awal loveGift */
+            .akadNikah .love {
+                margin-top: -60px;
+            }
+
+            .akadNikah .tanpa {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+
+            .BCA .name {
+                margin-top: 2px;
+                margin-bottom: 0px;
+            }
+
+            .BCA .norek {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+
+            .akadNikah .BCA .penerima {
+                margin-top: 20px;
+            }
+
+            /* Akhir loveGift */
+
+
+            /* awal kata */
+            .akadNikah .kata {
+                margin-bottom: 0px;
+            }
+
+            /* akhir kata */
+
 
         }
 
@@ -727,6 +743,14 @@
 
             /* Penutup acaraPernikahan */
 
+            /* awal loveGift */
+            .akadNikah .BCA .penerima {
+                margin-top: 20px;
+            }
+
+            /* Akhir loveGift */
+
+
         }
     </style>
 </head>
@@ -865,9 +889,46 @@
                 <img src="assets/img/cincin.png" alt="" class="cincin">
                 <h2 class="resepsi"
                     style="color: #7A6C61; font-family: 'Courgette', Sans-serif; font-size: 34px; font-weight: normal;">
-                    Resepsi</h2>
+                    Akad Nikah</h2>
                 <div class="tahun-container">
                     <div class="background-angka">
+                        <div class="tahun">16</div>
+                        <div style="color: #FFFFFF;
+                        font-family: 'Times New Roman', Sans-serif; font-size: 15px; font-weight: normal;
+                            text-transform: uppercase; line-height: 0.7em; letter-spacing: 3.1px;" class="tahun">2024
+                        </div>
+                    </div>
+                </div>
+                <p class="pukul" style="color: #000000;
+                font-family: 'Cormorant Garamond', Sans-serif; font-size: 17px; font-weight: normal;">Pukul : 13.00 Wib
+                    s/d Selesai</p>
+                <h2 class="lokasi" style="color: #7A6C61;
+                    font-family: 'Times New Roman', Sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;">Lokasi Acara</h2>
+                <p class="alamat" style="color: #000000;
+                font-family: 'Cormorant Garamond', Sans-serif; font-size: 17px; font-weight: normal; line-height:
+                    1.3em; padding: 0px 20px;">PONPES DARUL MUWAHHIDIN
+                    Jl. KH. Harun Wonokusumo Ds. Payungrejo, Kutorejo, Mojokerto</p>
+                <button class="btn btn-primary"><i class="fas fa-map-marked-alt"></i> Lihat Lokasi</button>
+            </div>
+        </div>
+        <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+    </div>
+    <!-- Penutup akadNikah -->
+
+    <!-- Laman Resepsi -->
+    <div class="akadNikah">
+        <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+        <div class="isi">
+            <div class="rectangle">
+                <!-- Isi konten kotak sesuai kebutuhan -->
+                <img src="assets/img/cincin.png" alt="" class="cincin">
+                <h2 class="resepsi"
+                    style="color: #7A6C61; font-family: 'Courgette', Sans-serif; font-size: 34px; font-weight: normal;">
+                    Resepsi</h2>
+                <div class="tahun-container">
+                    <div class="angka-resepsi">
                         <div class="tahun">18</div>
                         <div style="color: #FFFFFF;
                         font-family: 'Times New Roman', Sans-serif; font-size: 15px; font-weight: normal;
@@ -890,7 +951,78 @@
         </div>
         <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
     </div>
-    <!-- Penutup akadNikah -->
+    <!-- Penutup Resepsi -->
+
+    <!-- Laman loveGift -->
+    <div class="akadNikah">
+        <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+        <div class="isi">
+            <div class="rectangle">
+                <!-- Isi konten kotak sesuai kebutuhan -->
+                <h2 class="love" style="color: #7A6C61;
+                font-family: 'Courgette', Sans-serif; font-size: 27px; font-weight: normal;margin-bottom: 8px;">Love
+                    Gift</h2>
+                <p class="tanpa" style="color: #000000;
+                font-family: 'Cormorant Garamond', Sans-serif; font-size: 14px; font-weight: 400; line-height:
+                    1.5em;">Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami, dapat
+                    melalui:
+                </p>
+                <div class="BCA">
+                    <img src="assets/img/Logo-Bank-BCA.png" alt="" class="bca">
+                    <p class="name" style="color: #000000;
+                    font-family: 'Bree Serif', Sans-serif; font-size: 13px; font-weight: 500; position: relative;
+    top: -12px;">an. Akhsanul Fanani
+                    </p>
+                    <p class="norek" style="color: #000000;
+                    font-family: 'Bree Serif', Sans-serif; font-size: 13px; font-weight: 500;">1840560291
+                    </p>
+                    <button style="font-family: 'Bree Serif', Sans-serif; font-size: 12px; font-weight: 500; fill:
+                        #FFFFFF; color: #FFFFFF; background-color: #7A6C61; border-radius: 15px 15px 15px 15px; padding:
+                        6px 15px 6px 15px;margin-top: 10px;" class="btn btn-primary"><i class="far fa-copy"></i> Salin
+                        No.Rek</button>
+                </div>
+
+                <div class="BCA">
+                    <p class="name" style="color: #000000;
+                    font-family: 'Cormorant Garamond', Sans-serif; font-size: 15px; font-weight: 500;">Bagi yang ingin
+                        memberikan hadiah, silahkan dikirim ke alamat berikut :
+                    </p>
+                    <p class="penerima" style="color: #000000;
+                    font-family: 'Bree Serif', Sans-serif; font-size: 13px; font-weight: 500;">Penerima: Akhsanul
+                        Fanani</br>
+                        Mojosantren RT 11 RW 03 No. 25 Kemasan Krian Sidoarjo
+                    </p>
+                    <button style="font-family: 'Bree Serif', Sans-serif; font-size: 12px; font-weight: 500; fill:
+                        #FFFFFF; color: #FFFFFF; background-color: #7A6C61; border-radius: 15px 15px 15px 15px; padding:
+                        6px 15px 6px 15px;margin-top: 10px;" class="btn btn-primary"><i class="far fa-copy"></i> Salin
+                        Alamat</button>
+                </div>
+            </div>
+        </div>
+        <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+    </div>
+    <!-- Penutup loveGift -->
+
+    <!-- Laman loveGift -->
+    <div class="akadNikah">
+        <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+        <div class="isi">
+            <div class="rectangle">
+                <p class="kata" style="color: #000000;
+                font-family: 'Cormorant Garamond', Sans-serif; font-size: 15px; font-weight: 400; line-height: 1.5em;
+                    letter-spacing: -0.3px;">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+                    pasangan-pasangan untukmu dari
+                    jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu
+                    rasa kasih dan sayang."
+                </p>
+                <p style="color: #6A6A6A;
+                font-family: 'Crimson Pro', Sans-serif; font-size: 18px; font-weight: bold;margin-top: 10px;">-
+                    Ar-Rum: 21 -</p>
+            </div>
+        </div>
+        <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
+    </div>
+    <!-- Penutup loveGift -->
 </body>
 
 </html>
