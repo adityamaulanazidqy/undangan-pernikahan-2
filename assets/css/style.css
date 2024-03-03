@@ -156,6 +156,7 @@ body {
   padding: 20px 20px 10px 20px;
   border-radius: 8px;
   margin-top: 20px;
+  border: 1px solid #7a6c61;
 }
 
 .komentar .isi .form-komentar input[type='text'],

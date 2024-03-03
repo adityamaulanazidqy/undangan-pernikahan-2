@@ -31,8 +31,26 @@
     <link href="https://fontawesome.com/v5/icons/map-marked-alt?f=classic&s=solid">
     <link rel="stylesheet" href="assets/icon/fontawesome-free-5.15.4-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        #toggleButton {
+            width: 40px;
+            height: 40px;
+            border-radius: 26px;
+            background-color: #685952;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        #icon {
+            font-size: 22px;
+            color: white;
+            /* warna ikon */
+        }
+
         .akadNikah {
             text-align: center;
             background-image: url('assets/img/bg\ acaraPernikahan.png');
@@ -626,6 +644,16 @@
                 /* Membersihkan elemen setelah elemen float */
             }
 
+            .komentar .isi .form-komentar {
+                border: 1px solid #7a6c61;
+            }
+
+            #toggleButton {
+                position: fixed;
+                right: 10px;
+                top: 92%;
+                z-index: 3;
+            }
 
         }
 
@@ -851,54 +879,78 @@
                 /* Menempatkan kotak di rata tengah */
             }
 
+            .ucapan-tamu-item img {
+                position: relative;
+                top: 4px;
+                width: 16px;
+            }
 
+            .envelope-icon {
+                float: left;
+                margin-right: 10px;
+            }
+
+            #toggleButton {
+                position: fixed;
+                right: 200px;
+                top: 95%;
+                z-index: 3;
+            }
 
         }
     </style>
 </head>
 
-<body>
+<body style="overflow: hidden;">
+    <audio id="audio" loop>
+        <source src="assets/mp3/sound.mp3" type="audio/mp3">
+        Maaf, browser Anda tidak mendukung tag audio.
+    </audio>
+
+    <button id="toggleButton">
+        <i id="icon" class="fa fa-music"></i>
+    </button>
     <div class="pembukaan">
         <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
         <div class="isi">
-            <p style="margin-top: 0px; margin-bottom: 18px;    color: #685952;
+            <p class="tagline" style="margin-top: 0px; margin-bottom: 18px;    color: #685952;
             font-family: 'Crimson Pro', Sans-serif;
             font-size: 16px;
             font-weight: normal;">The Wedding Of</p>
-            <h1 style="position: relative;
+            <h1 class="headline" style="position: relative;
             right: 32px;">Fanani</h1>
-            <p class="dan" style="color: #685952;
+            <p class="dan tagline" style="color: #685952;
             font-family: 'Great Vibes', Sans-serif;
             font-size: 28px;
             font-weight: normal;">dan</p>
-            <h1 style="position: relative;
+            <h1 class="headline" style="position: relative;
             right: -12px;">Ayu</h1>
-            <p style="margin-top: 74px;color: #000000;
+            <p class="tagline" style="margin-top: 74px;color: #000000;
             font-family: 'Cormorant Garamond', Sans-serif; font-size: 15px; font-weight: normal; line-height: 1.3em;">
                 Kepada Yth. </br>Bapak/Ibu/Saudara/i</p>
-            <h2 style="    color: #000000;
+            <h2 class="punchline" style="color: #000000;
             font-family: 'monotype', Sans-serif; font-size: 26px; font-weight: normal;    margin-bottom: 16px;
     margin-top: 16px;">Daus</h2>
-            <p style="    color: #000000;
+            <p class="tagline" style="    color: #000000;
             font-family: 'Cormorant Garamond', Sans-serif; font-size: 12px; font-weight: normal; line-height: 1.3em;">
                 Maaf apabila ada kesalahan pada penulisan nama/gelar
             </p>
-            <button class="btn btn-primary"><i class="bi bi-envelope-open-fill"></i> Buka Undangan</button>
+            <button id="bukaUndangan" class="btn btn-primary punchline"><i class="bi bi-envelope-open-fill"></i> Buka Undangan</button>
         </div>
         <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
     </div>
 
     <!-- Laman Save the date -->
-    <div class="theDate">
+    <div class="theDate" style="display: none;">
         <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
         <div class="isi">
-            <p style="margin-top: 0px; margin-bottom: 18px;    color: #685952;
+            <p class="tagline" style="margin-top: 0px; margin-bottom: 18px;    color: #685952;
             font-family: 'Crimson Pro', Sans-serif;
             font-size: 16px;
             font-weight: normal;">The Wedding Of</p>
             <h1 style="position: relative;
             right: 32px;">Fanani</h1>
-            <p class="dan" style="color: #685952;
+            <p class="dan tagline" style="color: #685952;
             font-family: 'Great Vibes', Sans-serif;
             font-size: 28px;
             font-weight: normal; margin-top: 20px;">dan</p>
@@ -916,7 +968,7 @@
                 <div id="detik" class="angka">45</div> Detik
             </div>
             <img src="assets/img/swippp.png" alt="" class="gambar-swippp">
-            <p class=" scroll" style="color: #000000;
+            <p class=" scroll tagline" style="color: #000000;
             font-family: 'Cormorant Garamond', Sans-serif; font-style: italic;
             font-size: 18px;
             font-weight: 500;
@@ -937,7 +989,7 @@
                 font-family: 'Crimson Pro', Sans-serif; font-size: 18px; font-weight: bold;    margin-bottom: 10px;
     margin-top: 10px;">Assalamu'alaikum Wr. Wb.
                 </h2>
-                <p class="rahmat" style="color: #555555;
+                <p class="rahmat tagline" style="color: #555555;
                 font-family: 'Crimson Pro', Sans-serif; font-size: 16px; font-weight: normal;">Dengan memohon rahmat
                     dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan menyelenggarakan
                     acara pernikahan :</p>
@@ -949,14 +1001,14 @@
                 letter-spacing: 0px;
                 margin-bottom: 0px;">Akhsanul Fanani
                 </h2>
-                <p class="putra" style="color: #555555;
+                <p class="putra tagline" style="color: #555555;
                 font-family: 'Crimson Pro', Sans-serif;
                 font-size: 16px;
                 font-weight: normal;
                 text-transform: capitalize;">Putra Kedua Dari Bapak H. Bahrul Hasan
                     & Ibu Hj. Masnawiyah</p>
 
-                <p class="dan" style="color: #555555;
+                <p class="dan tagline" style="color: #555555;
                 font-family: 'Croissant One', Sans-serif; font-size: 20px; font-weight: 400; position: relative; top: 12px;">
                     &</p>
 
@@ -968,7 +1020,7 @@
                 letter-spacing: 0px;
                 margin-bottom: 0px;">Siti Hajar Ayu Kurnia Anjani
                 </h2>
-                <p class="putra" style="color: #555555;
+                <p class="putra tagline" style="color: #555555;
                 font-family: 'Crimson Pro', Sans-serif;
                 font-size: 16px;
                 font-weight: normal;
@@ -999,18 +1051,18 @@
                         </div>
                     </div>
                 </div>
-                <p class="pukul" style="color: #000000;
+                <p class="pukul tagline" style="color: #000000;
                 font-family: 'Cormorant Garamond', Sans-serif; font-size: 17px; font-weight: normal;">Pukul : 13.00 Wib
                     s/d Selesai</p>
                 <h2 class="lokasi" style="color: #7A6C61;
                     font-family: 'Times New Roman', Sans-serif;
                     font-size: 20px;
                     font-weight: 600;">Lokasi Acara</h2>
-                <p class="alamat" style="color: #000000;
+                <p class="alamat tagline" style="color: #000000;
                 font-family: 'Cormorant Garamond', Sans-serif; font-size: 17px; font-weight: normal; line-height:
                     1.3em; padding: 0px 20px;">PONPES DARUL MUWAHHIDIN
                     Jl. KH. Harun Wonokusumo Ds. Payungrejo, Kutorejo, Mojokerto</p>
-                <button class="btn btn-primary"><i class="fas fa-map-marked-alt"></i> Lihat Lokasi</button>
+                <button class="btn btn-primary" onclick="bukaGoogleMaps()"><i class="fas fa-map-marked-alt"></i> Lihat Lokasi</button>
             </div>
         </div>
         <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
@@ -1035,17 +1087,17 @@
                         </div>
                     </div>
                 </div>
-                <p class="pukul" style="color: #000000;
+                <p class="pukul tagline" style="color: #000000;
                 font-family: 'Cormorant Garamond', Sans-serif; font-size: 17px; font-weight: normal;">Pukul : 12.00
                     Wib s/d Selesai</p>
                 <h2 class="lokasi" style="color: #7A6C61;
                     font-family: 'Times New Roman', Sans-serif;
                     font-size: 20px;
                     font-weight: 600;">Lokasi Acara</h2>
-                <p class="alamat" style="color: #000000;
+                <p class="alamat tagline" style="color: #000000;
                 font-family: 'Cormorant Garamond', Sans-serif; font-size: 17px; font-weight: normal; line-height:
                     1.3em; padding: 0px 20px;">Mojosantren RT 11 RW 03 No. 25 Kemasan Krian Sidoarjo</p>
-                <button class="btn btn-primary"><i class="fas fa-map-marked-alt"></i> Lihat Lokasi</button>
+                <button class="btn btn-primary" onclick="bukaGoogleMapsResepsi()"><i class="fas fa-map-marked-alt"></i> Lihat Lokasi</button>
             </div>
         </div>
         <!-- <img class="bungabwh" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
@@ -1061,39 +1113,39 @@
                 <h2 class="love" style="color: #7A6C61;
                 font-family: 'Courgette', Sans-serif; font-size: 27px; font-weight: normal;margin-bottom: 8px;">Love
                     Gift</h2>
-                <p class="tanpa" style="color: #000000;
+                <p class="tanpa tagline" style="color: #000000;
                 font-family: 'Cormorant Garamond', Sans-serif; font-size: 14px; font-weight: 400; line-height:
                     1.5em;">Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami, dapat
                     melalui:
                 </p>
                 <div class="BCA">
                     <img src="assets/img/Logo-Bank-BCA.png" alt="" class="bca">
-                    <p class="name" style="color: #000000;
+                    <p class="name tagline" style="color: #000000;
                     font-family: 'Bree Serif', Sans-serif; font-size: 13px; font-weight: 500; position: relative;
     top: -12px;">an. Akhsanul Fanani
                     </p>
-                    <p class="norek" style="color: #000000;
+                    <p class="norek tagline" style="color: #000000;
                     font-family: 'Bree Serif', Sans-serif; font-size: 13px; font-weight: 500;">1840560291
                     </p>
-                    <button style="font-family: 'Bree Serif', Sans-serif; font-size: 12px; font-weight: 500; fill:
+                    <button class="btn btn-primary btn-salin-norek" style="font-family: 'Bree Serif', Sans-serif; font-size: 12px; font-weight: 500; fill:
                         #FFFFFF; color: #FFFFFF; background-color: #7A6C61; border-radius: 15px 15px 15px 15px; padding:
-                        6px 15px 6px 15px;margin-top: 10px;" class="btn btn-primary"><i class="far fa-copy"></i> Salin
+                        6px 15px 6px 15px;margin-top: 10px;"><i class="far fa-copy"></i> Salin
                         No.Rek</button>
                 </div>
 
                 <div class="BCA">
-                    <p class="name" style="color: #000000;
+                    <p class="name tagline" style="color: #000000;
                     font-family: 'Cormorant Garamond', Sans-serif; font-size: 15px; font-weight: 500;">Bagi yang ingin
                         memberikan hadiah, silahkan dikirim ke alamat berikut :
                     </p>
-                    <p class="penerima" style="color: #000000;
+                    <p class="penerima tagline" style="color: #000000;
                     font-family: 'Bree Serif', Sans-serif; font-size: 13px; font-weight: 500;">Penerima: Akhsanul
                         Fanani</br>
                         Mojosantren RT 11 RW 03 No. 25 Kemasan Krian Sidoarjo
                     </p>
-                    <button style="font-family: 'Bree Serif', Sans-serif; font-size: 12px; font-weight: 500; fill:
+                    <button class="btn btn-primary btn-salin-alamat" style="font-family: 'Bree Serif', Sans-serif; font-size: 12px; font-weight: 500; fill:
                         #FFFFFF; color: #FFFFFF; background-color: #7A6C61; border-radius: 15px 15px 15px 15px; padding:
-                        6px 15px 6px 15px;margin-top: 10px;" class="btn btn-primary"><i class="far fa-copy"></i> Salin
+                        6px 15px 6px 15px;margin-top: 10px;"><i class="far fa-copy"></i> Salin
                         Alamat</button>
                 </div>
             </div>
@@ -1107,14 +1159,14 @@
         <!-- <img class="bunga" src="assets/img/Asset-F06-3-1.png" alt="Bunga"> -->
         <div class="isi">
             <div class="rectangle">
-                <p class="kata" style="color: #000000;
+                <p class="kata tagline" style="color: #000000;
                 font-family: 'Cormorant Garamond', Sans-serif; font-size: 15px; font-weight: 400; line-height: 1.5em;
                     letter-spacing: -0.3px;">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
                     pasangan-pasangan untukmu dari
                     jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu
                     rasa kasih dan sayang."
                 </p>
-                <p style="color: #6A6A6A;
+                <p class="tagline" style="color: #6A6A6A;
                 font-family: 'Crimson Pro', Sans-serif; font-size: 18px; font-weight: bold;margin-top: 10px;">-
                     Ar-Rum: 21 -</p>
             </div>
@@ -1147,9 +1199,9 @@
                 $row_count = mysqli_fetch_assoc($result_count);
                 $jumlah_komentar = $row_count['jumlah_komentar'];
                 ?>
-                <p style="color: #7B6945;font-size: 1em;
+                <p class="tagline" style="color: #7B6945;font-size: 1em;
     font-weight: bold;text-decoration: none !important;
-    font-family: math;margin-top: 0px;"><?php echo $jumlah_komentar; ?> Comments</p>
+    font-family: math;margin-top: 0px;border-bottom: 1px solid #7a6c61; padding-bottom: 5px;"><?php echo $jumlah_komentar; ?> Comments</p>
                 <input type="text" name="nama" placeholder="Nama Anda">
                 <textarea name="ucapan" placeholder="Ucapan Anda"></textarea>
                 <select id="kehadiran-tamu" name="kehadiran">
@@ -1221,8 +1273,8 @@
                         ?>
                             <img src="assets/img/envelope-regular.svg" alt="" class="envelope-icon">
                     <?php
-                            echo "<p class='nama'>{$row['nama']}</p>";
-                            echo "<p>{$row['ucapan']}</p>";
+                            echo "<p class='nama tagline'>{$row['nama']}</p>";
+                            echo "<p class='tagline'>{$row['ucapan']}</p>";
                             // echo "<p>{$row['kehadiran']}</p>";
 
                             echo "</div>";
@@ -1232,7 +1284,7 @@
                         }
                     } else {
                         // Tampilkan pesan jika tidak ada lowongan pekerjaan
-                        echo "<p style='margin-top: 10px;'>Maaf, tidak ada ucapan saat ini.</p>";
+                        echo "<p class='tagline' style='margin-top: 10px;'>Maaf, tidak ada ucapan saat ini.</p>";
                     }
 
                     // Tutup koneksi
@@ -1240,7 +1292,7 @@
                     ?>
                 </div>
             </form>
-            <p style="color: #000000;
+            <p class="tagline" style="color: #000000;
     font-family: 'Cormorant Garamond', Sans-serif; font-size: 14px; font-weight: 400; line-height: 1.5em;">Atas kehadiran dan do’a restu dari Bapak/Ibu/Saudara/i sekalian, kami mengucapkan Terima Kasih.</p>
             <h2 style="color: #7A6C61;
     font-family: 'Crimson Pro', Sans-serif; font-size: 18px; font-weight: bold;">Wassalamu’alaikum Wr. Wb.
@@ -1250,6 +1302,139 @@
     </div>
     <!-- Penutup komentar -->
     <script>
+        const audio = document.getElementById('audio');
+        const toggleButton = document.getElementById('toggleButton');
+        const icon = document.getElementById('icon');
+
+        toggleButton.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                icon.classList.remove('fa-play');
+                icon.classList.add('fa-pause');
+            } else {
+                audio.pause();
+                icon.classList.remove('fa-pause');
+                icon.classList.add('fa-play');
+            }
+        });
+
+        // animasi
+        ScrollReveal({
+            duration: 1000
+        })
+
+        ScrollReveal().reveal('.headline')
+        ScrollReveal().reveal('.tagline', {
+            delay: 400
+        })
+        ScrollReveal().reveal('.punchline', {
+            delay: 1000
+        })
+
+        // akhir animasi
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mendapatkan tombol "Buka Undangan"
+            var bukaUndanganButton = document.getElementById("bukaUndangan");
+
+            // Menambahkan event listener untuk klik tombol
+            bukaUndanganButton.addEventListener("click", function() {
+                // Menampilkan laman theDate dengan animasi
+                document.querySelector('.theDate').style.display = 'block';
+                scrollTo('.theDate', 1000); // animasi scroll ke laman theDate
+
+                // Mengaktifkan scroll
+                document.body.style.overflow = 'auto';
+            });
+
+            // Fungsi untuk melakukan animasi scroll
+            function scrollTo(element, duration) {
+                var target = document.querySelector(element);
+                var targetPosition = target.getBoundingClientRect().top;
+                var startPosition = window.pageYOffset;
+                var distance = targetPosition - startPosition;
+                var startTime = null;
+
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    var timeElapsed = currentTime - startTime;
+                    var run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animation);
+            }
+        });
+
+        // Mengambil tombol "Salin Norek"
+        var salinNorekButton = document.querySelector('.btn-salin-norek');
+
+        // Menambahkan event listener untuk saat tombol "Salin Norek" diklik
+        salinNorekButton.addEventListener('click', function() {
+            // Mengambil teks dari paragraf yang berisi norek
+            var norekText = document.querySelector('.norek').innerText;
+
+            // Menyalin teks norek ke clipboard
+            navigator.clipboard.writeText(norekText)
+                .then(function() {
+                    console.log('Nomor Rekening berhasil disalin:', norekText);
+                    // Di sini Anda bisa menambahkan feedback atau pemberitahuan kepada pengguna
+                    alert('Nomor Rekening berhasil disalin: ' + norekText);
+                })
+                .catch(function(err) {
+                    console.error('Gagal menyalin nomor rekening: ', err);
+                    // Di sini Anda bisa menambahkan feedback atau pemberitahuan jika terjadi kesalahan
+                    alert('Gagal menyalin nomor rekening. Silakan coba lagi.');
+                });
+        });
+
+        // Mengambil tombol "Salin Alamat"
+        var salinAlamatButton = document.querySelector('.btn-salin-alamat');
+
+        // Menambahkan event listener untuk saat tombol "Salin Alamat" diklik
+        salinAlamatButton.addEventListener('click', function() {
+            // Mengambil teks dari paragraf yang berisi alamat
+            var alamatText = document.querySelector('.penerima').innerText;
+
+            // Menyalin teks alamat ke clipboard
+            navigator.clipboard.writeText(alamatText)
+                .then(function() {
+                    console.log('Alamat berhasil disalin:', alamatText);
+                    // Di sini Anda bisa menambahkan feedback atau pemberitahuan kepada pengguna
+                    alert('Alamat berhasil disalin: ' + alamatText);
+                })
+                .catch(function(err) {
+                    console.error('Gagal menyalin alamat: ', err);
+                    // Di sini Anda bisa menambahkan feedback atau pemberitahuan jika terjadi kesalahan
+                    alert('Gagal menyalin alamat. Silakan coba lagi.');
+                });
+        });
+
+        function bukaGoogleMaps() {
+
+            // Membangun URL untuk membuka Google Maps dengan lokasi yang ditentukan
+            var googleMapsUrl = "https://maps.app.goo.gl/aFrBGWzYWHUWC8Jk6";
+
+            // Buka Google Maps di tab baru
+            window.open(googleMapsUrl, "_blank");
+        }
+
+        function bukaGoogleMapsResepsi() {
+
+            // Membangun URL untuk membuka Google Maps dengan lokasi yang ditentukan
+            var googleMapsUrl = "https://maps.app.goo.gl/xqC7QpuA85fDc1J37";
+
+            // Buka Google Maps di tab baru
+            window.open(googleMapsUrl, "_blank");
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // Menghitung jumlah entri ucapan tamu
             var jumlahUcapanTamu = document.querySelectorAll('.ucapan-tamu-item').length;
